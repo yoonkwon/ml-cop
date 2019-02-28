@@ -1,6 +1,10 @@
 # ml-cop
 이미지: https://github.com/okwrtdsh/anaconda3
 
+0. Install Docker
+- Download pkg from https://docs.docker.com/docker-for-mac/install/
+- Install it
+
 1. clone from github
 ```bash
 git clone https://github.com/okwrtdsh/anaconda3
