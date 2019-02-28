@@ -50,3 +50,5 @@ reg.coef_
 #Out[2]
 array([0.5, 0.5])
 ```
+
+run `docker-compose down` to close jupyter 
