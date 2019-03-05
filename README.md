@@ -1,6 +1,7 @@
 # ml-cop
-이미지: https://github.com/okwrtdsh/anaconda3
+base repo: https://github.com/okwrtdsh/anaconda3
 
+## Howto
 0. Install Docker
 - Download pkg from https://docs.docker.com/docker-for-mac/install/
 - Install it
@@ -52,3 +53,10 @@ array([0.5, 0.5])
 ```
 
 run `docker-compose down` to close jupyter 
+
+
+## In case installing addtional packages
+```
+docker exec -ti anaconda3_jupyter_1 /bin/bash
+(base) root# pip install some_package_name
+```
