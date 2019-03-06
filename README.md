@@ -1,6 +1,6 @@
 # ml-cop
-docker repo: https://github.com/okwrtdsh/anaconda3
-study repo: https://github.com/AndersonJo/machine-learning
+- docker repo: https://github.com/okwrtdsh/anaconda3
+- study repo: https://github.com/AndersonJo/machine-learning
 
 ## Environment
 
@@ -48,7 +48,7 @@ array([0.5, 0.5])
 docker-compose down
 ```
 
-## In case installing addtional packages
+### In case installing addtional packages
 ```
 docker exec -ti ml-cop_jupyter_1 /bin/bash
 $ pip install some_package_name
