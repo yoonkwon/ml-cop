@@ -1,41 +1,32 @@
 # ml-cop
-base repo: https://github.com/okwrtdsh/anaconda3
+docker repo: https://github.com/okwrtdsh/anaconda3
+study repo: https://github.com/AndersonJo/machine-learning
 
-## Howto
-0. Install Docker
+## Environment
+
+### Install Docker
 - Download pkg from https://docs.docker.com/docker-for-mac/install/
 - Install it
 
-1. clone from github
+### clone from github
 ```bash
-git clone https://github.com/okwrtdsh/anaconda3
-```
-2. create docker-compose.yml
-```
-vi docker-compose.yml
-```
-3. set base image in docker-compose.yml
-```yaml
-# tf-cpu
-version: '3'
-services:
-  jupyter:
-    image: okwrtdsh/anaconda3:tf-cpu
-    ports:
-      - '8888:8888'
-    volumes:
-      - ./notebooks:/src/notebooks
+git clone https://github.com/yoonkwon/ml-cop
 ```
 
-4. build using docker-compose
+### build docker image
+```
+docker build --rm -t ml-cop:latest .
+```
+
+### run using docker-compose
 ```bash
 docker-compose up -d
 ```
 
-5. check jupyter is running
+### check jupyter is running
 - http://localhost:8888
 
-6. run basic python code
+### run basic python code
 - new > python3
 - write code below
 ```python
@@ -46,17 +37,19 @@ reg = linear_model.LinearRegression()
 reg.fit([[0, 0], [1, 1], [2, 2]], [0, 1, 2])
 reg.coef_
 ```
-- click Run 
+- click Run button and check the output 
 ```python
 #Out[2]
 array([0.5, 0.5])
 ```
 
-run `docker-compose down` to close jupyter 
-
+### stop docker
+```
+docker-compose down
+```
 
 ## In case installing addtional packages
 ```
-docker exec -ti anaconda3_jupyter_1 /bin/bash
-(base) root# pip install some_package_name
+docker exec -ti ml-cop_jupyter_1 /bin/bash
+$ pip install some_package_name
 ```
