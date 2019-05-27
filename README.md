@@ -20,6 +20,8 @@ docker build --rm -t ml-cop:latest .
 
 ### run using docker-compose
 ```bash
+#make .env file on osx
+./osx.sh
 docker-compose up -d
 ```
 
